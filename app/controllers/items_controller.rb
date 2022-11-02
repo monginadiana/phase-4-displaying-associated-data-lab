@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
 
    
-  def index
-    items = Item.find(params[:id])
-    render json: items, include: :Item
-
-  end
+    def index
+        user_data=Item.all
+        render json: user_data, include: :user
+        
+    end
 end
